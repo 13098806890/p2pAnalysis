@@ -1,4 +1,4 @@
-var size = 50
+var size = 100
 var windowlist = []
 
 for (var i=0; i< size; i++)
@@ -7,9 +7,9 @@ for (var i=0; i< size; i++)
 }
 
 
-for (var i = 0; i< 10; i++)
+for (var i = 0; i< size; i++)
 {
-   var blob = new Blob([JSON.stringify(windowlist[i].dataList)], {
+   var blob = new Blob([JSON.stringify(windowlist[index%size].dataList)], {
     type: 'text/plain'
  	});
     var aLink = document.createElement('a');
